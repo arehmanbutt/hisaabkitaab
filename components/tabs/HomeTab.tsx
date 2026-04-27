@@ -75,7 +75,7 @@ export default function HomeTab() {
               <Receipt size={15} className={overdueLoans.length > 0 ? 'text-red-500' : 'text-gray-400'} />
             </div>
             <p className={`text-[11px] font-semibold uppercase tracking-widest ${overdueLoans.length > 0 ? 'text-red-500' : 'text-gray-400'}`}>
-              میعاد گزرے
+              تاریخ گزری
             </p>
           </div>
           <p className={`text-4xl font-black leading-none ${overdueLoans.length > 0 ? 'text-red-600' : 'text-gray-200'}`}>
@@ -124,7 +124,7 @@ export default function HomeTab() {
             <section className="bg-white rounded-2xl ring-1 ring-black/[0.06] shadow-sm overflow-hidden">
               <div className="flex items-center gap-2.5 px-5 py-4 border-b border-red-100 bg-red-50/60">
                 <AlertTriangle size={15} className="text-red-500 shrink-0" />
-                <h2 className="text-sm font-black text-red-700">میعاد گزرے ادھار</h2>
+                <h2 className="text-sm font-black text-red-700">تاریخ گزرے ادھار</h2>
                 <span className="mr-auto bg-red-500 text-white text-[11px] font-bold px-2 py-0.5 rounded-full">
                   {overdueLoans.length}
                 </span>

@@ -144,7 +144,7 @@ export default function LoansTab() {
           <h1 className="text-2xl lg:text-3xl font-black text-gray-900">قرض و ادھار</h1>
           {overdueCount > 0 && (
             <p className="text-red-500 text-sm font-semibold mt-1 flex items-center gap-1">
-              <AlertCircle size={13} />{overdueCount} میعاد گزر گئی
+              <AlertCircle size={13} />{overdueCount} تاریخ گزر گئی
             </p>
           )}
         </div>
@@ -168,7 +168,7 @@ export default function LoansTab() {
           </div>
           {overdueCount > 0 && (
             <div className="bg-white/10 backdrop-blur-sm rounded-2xl px-4 py-3 text-center shrink-0 ring-1 ring-white/20">
-              <p className="text-green-200 text-[11px] font-semibold uppercase tracking-widest">میعاد گزری</p>
+              <p className="text-green-200 text-[11px] font-semibold uppercase tracking-widest">تاریخ گزری</p>
               <p className="text-white text-3xl font-black mt-1">{overdueCount}</p>
             </div>
           )}

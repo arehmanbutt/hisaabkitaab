@@ -2,7 +2,7 @@ import { Loan, Supplier, StockItem, ShopInfo } from './types';
 import { seedLoans, seedSuppliers, seedStock, seedShopInfo } from './seedData';
 
 const KEYS = {
-  loans: 'hk_loans',
+  loans: 'hk_loans_v2',
   suppliers: 'hk_suppliers',
   stock: 'hk_stock',
   shop: 'hk_shop',

@@ -1,6 +1,6 @@
 'use client';
 import { useState } from 'react';
-import { Edit2, LogOut, Store, User, Phone, MapPin, Shield, Wifi } from 'lucide-react';
+import { Edit2, LogOut, Store, User, Phone, MapPin } from 'lucide-react';
 import { useApp } from '@/context/AppContext';
 import EditShopModal from '@/components/modals/EditShopModal';
 import ConfirmDialog from '@/components/ConfirmDialog';
@@ -70,35 +70,6 @@ export default function SettingsTab() {
 
         {/* Right column */}
         <div className="space-y-4">
-          {/* App info */}
-          <div className="bg-white rounded-2xl ring-1 ring-black/[0.06] shadow-sm p-6">
-            <div className="flex items-center gap-4 mb-5">
-              <div className="w-14 h-14 bg-gradient-to-br from-[#1a7a4a] to-[#155f3a] rounded-2xl flex items-center justify-center shadow-lg shadow-emerald-900/20">
-                <span className="text-white text-2xl font-black">ہ</span>
-              </div>
-              <div>
-                <p className="font-black text-gray-900 text-lg leading-none">ہساب کتاب</p>
-                <p className="text-gray-400 text-sm mt-1">آپ کی دکان کا ڈیجیٹل بہی کھاتا</p>
-              </div>
-            </div>
-            <div className="space-y-3">
-              <div className="flex items-center justify-between py-2.5 px-3 bg-gray-50 rounded-xl">
-                <div className="flex items-center gap-2.5">
-                  <Shield size={15} className="text-[#1a7a4a]" />
-                  <span className="text-gray-600 text-sm">ڈیٹا اسٹوریج</span>
-                </div>
-                <span className="font-bold text-[#1a7a4a] text-sm">مقامی ڈیوائس</span>
-              </div>
-              <div className="flex items-center justify-between py-2.5 px-3 bg-gray-50 rounded-xl">
-                <div className="flex items-center gap-2.5">
-                  <Wifi size={15} className="text-gray-400" />
-                  <span className="text-gray-600 text-sm">انٹرنیٹ کی ضرورت</span>
-                </div>
-                <span className="font-bold text-gray-500 text-sm">نہیں</span>
-              </div>
-            </div>
-          </div>
-
           {/* Logout */}
           <div className="bg-white rounded-2xl ring-1 ring-black/[0.06] shadow-sm p-6">
             <h3 className="font-black text-gray-800 mb-1.5">لاگ آؤٹ</h3>

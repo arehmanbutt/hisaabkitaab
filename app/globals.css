@@ -1,26 +1,69 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Nastaliq+Urdu:wght@400;500;600;700&display=swap');
+
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+@theme {
+  --color-primary: #1a7a4a;
+  --color-primary-dark: #155f3a;
+  --color-primary-light: #eef7f2;
+  --color-surface: #f4f9f6;
+  --color-danger: #e02424;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
+* { box-sizing: border-box; }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
+html, body { height: 100%; overflow-x: hidden; }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background-color: #f4f9f6;
+  color: #111827;
+  font-family: 'Noto Nastaliq Urdu', serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  direction: rtl;
+}
+
+*, *::before, *::after { font-family: inherit; }
+
+input, textarea, select, button { font-family: 'Noto Nastaliq Urdu', serif; }
+
+input[type="date"] { font-family: system-ui, sans-serif; direction: ltr; text-align: left; }
+input[type="tel"], input[type="number"] { direction: ltr; text-align: right; }
+input[type="text"], textarea { text-align: right; }
+
+/* Scrollbar */
+::-webkit-scrollbar { width: 3px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: #a7f3d0; border-radius: 99px; }
+
+/* ── Animations ─────────────────────────────── */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(8px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+@keyframes slideUp {
+  from { opacity: 0; transform: translateY(24px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+@keyframes scaleIn {
+  from { opacity: 0; transform: scale(0.95); }
+  to   { opacity: 1; transform: scale(1); }
+}
+@keyframes toastIn {
+  from { opacity: 0; transform: translate(-50%, -12px) scale(0.95); }
+  to   { opacity: 1; transform: translate(-50%, 0)    scale(1); }
+}
+
+.animate-fadeIn   { animation: fadeIn   0.25s ease-out both; }
+.animate-slideUp  { animation: slideUp  0.3s  cubic-bezier(.16,1,.3,1) both; }
+.animate-scaleIn  { animation: scaleIn  0.2s  ease-out both; }
+.animate-toastIn  { animation: toastIn  0.3s  cubic-bezier(.16,1,.3,1) both; }
+
+/* ── Typography ─────────────────────────────── */
+h1, h2, h3, h4, h5 { line-height: 1.8; }
+p, span, label, button, a, li { line-height: 2; }
+
+/* ── Desktop sidebar offset ─────────────────── */
+@media (min-width: 1024px) {
+  body { background-color: #e8ede9; }
 }

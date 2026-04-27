@@ -1,0 +1,11 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npm run *)",
+      "WebFetch(domain:tajir-dost.vercel.app)",
+      "Bash(curl -s \"https://tajir-dost.vercel.app/\")",
+      "Bash(curl -s \"https://tajir-dost.vercel.app/_next/static/chunks/14xxic7i3.-ly.css\")",
+      "Bash(curl -s https://tajir-dost.vercel.app/)"
+    ]
+  }
+}

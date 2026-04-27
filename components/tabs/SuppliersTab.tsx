@@ -90,7 +90,7 @@ export default function SuppliersTab() {
       >
         <div>
           <p className="text-white font-black text-lg">Tajir پر آرڈر کریں</p>
-          <p className="text-green-200/80 text-sm mt-1">بہترین قیمتوں پر تھوک مال منگوائیں</p>
+          <p className="text-green-200/80 text-sm mt-1">بہترین قیمتوں پر مال منگوائیں</p>
         </div>
         <div className="w-12 h-12 bg-white/15 rounded-2xl flex items-center justify-center group-hover:bg-white/25 transition-colors duration-200">
           <ExternalLink size={20} className="text-white" />

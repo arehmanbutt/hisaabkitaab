@@ -22,7 +22,7 @@ function LoanCard({ loan, onPaid, onDelete }: { loan: Loan; onPaid: (id: string)
   const [confirmPaid, setConfirmPaid] = useState(false);
   const [confirmDelete, setConfirmDelete] = useState(false);
 
-  const waMsg = encodeURIComponent(`السلام علیکم! ${shopInfo.shopName} کی طرف سے یاددہانی: آپ کے ذمہ ₨${loan.amount} روپے واجب الادا ہیں۔ براہ کرم جلد ادائیگی کریں۔ شکریہ 🙏\n- ${shopInfo.ownerName}، ${shopInfo.shopName}`);
+  const waMsg = encodeURIComponent(`السلام علیکم! ${shopInfo.shopName} کی طرف سے یاد دہانی: آپ کے ذمہ ₨${loan.amount} روپے باقی ہیں۔ براہ کرم جلد دے دیں۔ شکریہ 🙏\n- ${shopInfo.ownerName}، ${shopInfo.shopName}`);
   const waUrl = `https://wa.me/92${loan.phone.replace(/^0/, '')}?text=${waMsg}`;
 
   return (
@@ -51,7 +51,7 @@ function LoanCard({ loan, onPaid, onDelete }: { loan: Loan; onPaid: (id: string)
               </span>
             ) : isDueToday ? (
               <span className="inline-flex items-center gap-1 text-amber-600 text-xs font-semibold bg-amber-50 px-2 py-0.5 rounded-full">
-                <Clock size={10} />آج مقررہ
+                <Clock size={10} />آج دینا ہے
               </span>
             ) : (
               <span className="text-gray-400 text-xs">باقی {diff} دن</span>
@@ -96,7 +96,7 @@ function LoanCard({ loan, onPaid, onDelete }: { loan: Loan; onPaid: (id: string)
       {confirmDelete && (
         <ConfirmDialog
           message="ادھار حذف کریں؟"
-          detail="یہ ریکارڈ مستقل طور پر ختم ہو جائے گا۔"
+          detail="یہ ریکارڈ ہمیشہ کے لیے مٹ جائے گا۔"
           confirmText="حذف کریں"
           cancelText="منسوخ"
           dangerous
@@ -162,7 +162,7 @@ export default function LoansTab() {
       <div className="bg-gradient-to-br from-[#1a7a4a] to-[#155f3a] rounded-2xl p-5 lg:p-6 mb-6 text-white shadow-lg shadow-emerald-900/25">
         <div className="flex items-center justify-between gap-4">
           <div>
-            <p className="text-green-200 text-[11px] font-semibold uppercase tracking-widest">کل واجب الادا</p>
+            <p className="text-green-200 text-[11px] font-semibold uppercase tracking-widest">کل باقی رقم</p>
             <p className="text-4xl lg:text-5xl font-black mt-2 leading-none">₨{fmt(total)}</p>
             <p className="text-green-200/80 text-sm mt-2">{active.length} فعال ادھار</p>
           </div>

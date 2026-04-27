@@ -56,7 +56,7 @@ export default function HomeTab() {
           className="sm:col-span-2 lg:col-span-1 bg-gradient-to-br from-[#1a7a4a] to-[#155f3a] rounded-2xl p-5 text-white shadow-lg shadow-emerald-900/20 cursor-pointer hover:-translate-y-0.5 hover:shadow-xl hover:shadow-emerald-900/25 active:scale-[0.98] transition-all duration-200"
           onClick={() => router.push('/loans')}
         >
-          <p className="text-green-200 text-[11px] font-semibold uppercase tracking-widest">کل واجب الادا</p>
+          <p className="text-green-200 text-[11px] font-semibold uppercase tracking-widest">کل باقی رقم</p>
           <p className="text-4xl font-black mt-2 leading-none">₨{fmt(totalOutstanding)}</p>
           <p className="text-green-200/80 text-sm mt-2">{activeLoans.length} فعال ادھار</p>
         </div>
@@ -132,7 +132,7 @@ export default function HomeTab() {
               <div className="divide-y divide-gray-50">
                 {overdueLoans.map(loan => {
                   const diff = Math.abs(getDaysDiff(loan.reminderDate));
-                  const waMsg = encodeURIComponent(`السلام علیکم! ${shopInfo.shopName} کی طرف سے یاددہانی: آپ کے ذمہ ₨${loan.amount} روپے واجب الادا ہیں۔ براہ کرم جلد ادائیگی کریں۔ شکریہ 🙏\n- ${shopInfo.ownerName}، ${shopInfo.shopName}`);
+                  const waMsg = encodeURIComponent(`السلام علیکم! ${shopInfo.shopName} کی طرف سے یاد دہانی: آپ کے ذمہ ₨${loan.amount} روپے باقی ہیں۔ براہ کرم جلد دے دیں۔ شکریہ 🙏\n- ${shopInfo.ownerName}، ${shopInfo.shopName}`);
                   const waUrl = `https://wa.me/92${loan.phone.replace(/^0/, '')}?text=${waMsg}`;
                   return (
                     <div

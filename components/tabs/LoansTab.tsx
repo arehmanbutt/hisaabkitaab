@@ -45,7 +45,7 @@ function LoanCard({
   const [confirmDelete, setConfirmDelete] = useState(false);
 
   const waMsg = encodeURIComponent(
-    `السلام علیکم! ${shopInfo.shopName} کی طرف سے یاد دہانی: آپ کے ذمہ ₨${loan.amount} روپے باقی ہیں۔ براہ کرم جلد دے دیں۔ شکریہ 🙏\n- ${shopInfo.ownerName}، ${shopInfo.shopName}`,
+    `السلام علیکم! ${shopInfo.shopName} کی طرف سے یاد دہانی: آپ کی طرف ₨${loan.amount} بقایا ہیں۔ براہ کرم جلد ادائیگی کر دیں۔ شکریہ \n- ${shopInfo.ownerName}، ${shopInfo.shopName}`,
   );
   const waUrl = `https://wa.me/92${loan.phone.replace(/^0/, "")}?text=${waMsg}`;
 

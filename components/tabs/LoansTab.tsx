@@ -223,7 +223,7 @@ export default function LoansTab() {
               ₨{fmt(total)}
             </p>
             <p className="text-green-200/80 text-sm mt-2">
-              ادھار لینے والے افراد کی تعداد :{active.length}
+              ادھار لینے والے افراد کی تعداد : {active.length}
             </p>
           </div>
         </div>

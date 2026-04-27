@@ -89,7 +89,7 @@ export default function HomeTab() {
             ₨{fmt(totalOutstanding)}
           </p>
           <p className="text-green-200/80 text-sm mt-2">
-            ادھار لینے والے افراد کی تعداد {activeLoans.length}
+            ادھار لینے والے افراد کی تعداد : {activeLoans.length}
           </p>
         </div>
 
